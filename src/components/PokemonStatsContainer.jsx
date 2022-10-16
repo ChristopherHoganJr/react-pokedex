@@ -12,7 +12,7 @@ const PokemonStatsContainer = ({ pokemon }) => {
       </h3>
       <div className="d-flex gap-2 flex-wrap justify-content-center align-items-center">
         {pokemon.types.length > 1 ? <p>Types:</p> : <p>Type:</p>}
-        {pokemon.types.map((e) => {
+        {pokemon.types.map((e, idx) => {
           let pokemonType = "";
           switch (e.type.name) {
             case "fire":
@@ -39,7 +39,11 @@ const PokemonStatsContainer = ({ pokemon }) => {
             default:
               pokemonType = "light";
           }
-          return <p className={`btn btn-${pokemonType}`}>{e.type.name}</p>;
+          return (
+            <p key={idx} className={`btn btn-${pokemonType}`}>
+              {e.type.name}
+            </p>
+          );
         })}
       </div>
       <div></div>

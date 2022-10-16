@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 // components
 import SearchBar from "./components/SearchBar";
 import PokemonStatsContainer from "./components/PokemonStatsContainer";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
-  // useNavigate
-  const navigate = useNavigate();
   // States
   const [pokemonName, setPokemonName] = useState("");
   const [pokemon, setPokemon] = useState();
+  const [notFound, setNotFound] = useState(false);
 
   // Functions
   const searchPokemon = (e) => {
@@ -21,8 +21,9 @@ function App() {
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`)
       .then((res) => {
         setPokemon(res.data);
+        setNotFound(false);
       })
-      .catch((err) => navigate("/err"));
+      .catch((err) => setNotFound(true));
   };
 
   return (
@@ -36,12 +37,14 @@ function App() {
         />
       </div>
       <div className="mt-3">
-        {pokemon ? (
-          <PokemonStatsContainer pokemon={pokemon} />
-        ) : (
+        {notFound === true ? (
+          <ErrorMessage />
+        ) : notFound === false && !pokemon ? (
           <p className="text-center">
             Please enter a pokemon name to see stats.
           </p>
+        ) : (
+          <PokemonStatsContainer pokemon={pokemon} />
         )}
       </div>
     </div>

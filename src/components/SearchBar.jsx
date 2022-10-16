@@ -1,6 +1,13 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 const SearchBar = ({ pokemonName, setPokemonName, searchPokemon }) => {
+  const [empty, setEmpty] = useState(0);
+
+  useEffect(() => {
+    setEmpty(pokemonName.length);
+  }, [pokemonName]);
+  console.log(empty);
   return (
     <form
       className="d-flex align-items-center gap-3"
@@ -14,7 +21,12 @@ const SearchBar = ({ pokemonName, setPokemonName, searchPokemon }) => {
           onChange={(e) => setPokemonName(e.target.value)}
         />
       </div>
-      <button className="btn btn-success btn-sm">Look Up Pokemon</button>
+      <button
+        className="btn btn-success btn-sm"
+        disabled={empty == 0 ? true : false}
+      >
+        Look Up Pokemon
+      </button>
     </form>
   );
 };
