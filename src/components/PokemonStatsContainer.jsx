@@ -64,6 +64,16 @@ const PokemonStatsContainer = ({ pokemon }) => {
           );
         })}
       </div>
+      <h4>--- Able to learn moves ----</h4>
+      <div className="d-flex flex-wrap gap-2">
+        {pokemon.moves.map((e, idx) => {
+          return (
+            <p key={idx} className="btn btn-success">
+              {e.move.name}
+            </p>
+          );
+        })}
+      </div>
     </div>
   );
 };
