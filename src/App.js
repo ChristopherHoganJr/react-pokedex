@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App container">
       <h1 className="text-center">React Pokedex</h1>
       <div className="d-flex justify-content-center">
         <SearchBar
