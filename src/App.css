@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-.game-red {
+.game-red,
+.game-firered {
   background-color: red;
   color: white;
 }
@@ -18,10 +19,12 @@
   background-color: yellow;
   color: black;
 }
-.game-gold {
+.game-gold,
+.game-heartgold {
   background-color: gold;
 }
-.game-silver {
+.game-silver,
+.game-soulsilver {
   background-color: silver;
 }
 .game-crystal {
@@ -38,10 +41,6 @@
 .game-emerald {
   background-color: aquamarine;
 }
-.game-firered {
-  background-color: red;
-  color: white;
-}
 .game-leafgreen {
   background-color: green;
   color: white;
@@ -57,12 +56,6 @@
 .game-platinum {
   background-color: lightsteelblue;
 }
-.game-heartgold {
-  background-color: gold;
-}
-.game-soulsilver {
-  background-color: silver;
-}
 .game-black,
 .game-black-2 {
   background-color: black;
@@ -71,4 +64,59 @@
 .game-white,
 .game-white-2 {
   background-color: antiquewhite;
+}
+
+.type-normal {
+  background-color: rgb(156, 155, 110);
+}
+.type-fight {
+  background-color: rgb(191, 43, 42);
+}
+.type-flying {
+  background-color: rgb(142, 152, 217);
+}
+.type-poison {
+  background-color: rgb(184, 78, 147);
+}
+.type-ground {
+  background-color: rgb(228, 207, 162);
+}
+.type-rock {
+  background-color: rgb(184, 156, 93);
+}
+.type-bug {
+  background-color: rgb(158, 182, 68);
+}
+.type-ghost {
+  background-color: rgb(95, 85, 166);
+}
+.type-steel {
+  background-color: rgb(164, 161, 184);
+}
+.type-fire {
+  background-color: rgb(255, 63, 53);
+}
+.type-water {
+  background-color: rgb(18, 130, 237);
+}
+.type-grass {
+  background-color: rgb(94, 211, 102);
+}
+.type-electric {
+  background-color: rgb(255, 190, 76);
+}
+.type-psychic {
+  background-color: rgb(255, 99, 151);
+}
+.type-ice {
+  background-color: rgb(45, 199, 222);
+}
+.type-dragon {
+  background-color: rgb(127, 88, 225);
+}
+.type-dark {
+  background-color: rgb(110, 80, 71);
+}
+.type-fairy {
+  background-color: rgb(255, 172, 238);
 }

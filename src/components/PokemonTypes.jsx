@@ -5,7 +5,7 @@ const PokemonTypes = ({ pokemonTypes }) => {
     <div className='d-flex gap-2 flex-wrap justify-content-center align-items-center'>
       {pokemonTypes.map((e, idx) => {
         return (
-          <p key={idx} className={`btn btn-${e.type.name}`}>
+          <p key={idx} className={`btn type-${e.type.name}`}>
             {e.type.name}
           </p>
         );
