@@ -5,3 +5,70 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.game-red {
+  background-color: red;
+  color: white;
+}
+.game-blue {
+  background-color: blue;
+  color: white;
+}
+.game-yellow {
+  background-color: yellow;
+  color: black;
+}
+.game-gold {
+  background-color: gold;
+}
+.game-silver {
+  background-color: silver;
+}
+.game-crystal {
+  background-color: lightcoral;
+}
+.game-ruby {
+  background-color: darkred;
+  color: white;
+}
+.game-sapphire {
+  background-color: darkblue;
+  color: white;
+}
+.game-emerald {
+  background-color: aquamarine;
+}
+.game-firered {
+  background-color: red;
+  color: white;
+}
+.game-leafgreen {
+  background-color: green;
+  color: white;
+}
+.game-diamond {
+  background-color: cornflowerblue;
+  color: white;
+}
+.game-pearl {
+  background-color: crimson;
+  color: white;
+}
+.game-platinum {
+  background-color: lightsteelblue;
+}
+.game-heartgold {
+  background-color: gold;
+}
+.game-soulsilver {
+  background-color: silver;
+}
+.game-black,
+.game-black-2 {
+  background-color: black;
+  color: white;
+}
+.game-white,
+.game-white-2 {
+  background-color: antiquewhite;
+}
